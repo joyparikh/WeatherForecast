@@ -18,35 +18,29 @@
 <h2>Weather Forecast</h2>
 </div>
 <div style="font-family:Verdana; font-size:13px;" class="text-center">
-    @*<table width=100% border=1>
-        <tr>
-            <td width=100%>*@
     <table style="margin:0 auto; border:dashed 1px black;">
-                    <tr>
-                        <th colspan=5 style="font-family:Verdana; font-size:14px; font-weight:bold;">Date</th>
-                        <th colspan=5 style ="font-family:Verdana; font-size:14px; font-weight:bold;">Condition</th>
-                        <th colspan=5 style="font-family:Verdana; font-size:14px; font-weight:bold;">Temperature</th>
-                        <th> </th>
-                    </tr>
-                    @{
-                        if (ViewData["temp"] != null)
-                        {
-                            if (ViewData.Values != null && ViewData.Values.Count() > 0)
-                            {
-                                foreach (var item in ViewData["temp"] as List<Weather.Forecastday>)
-                                {
-                                    <tr>
-                                        <td colspan=5 style="font-family:Verdana; font-size:12px;">@item.date</td>
-                                        <td colspan=5 style ="font-family:Verdana; font-size:12px;">@item.day.condition.text</td>
-                                        <td colspan=5 style="font-family:Verdana; font-size:12px;">@item.day.mintemp_f - @item.day.maxtemp_f</td>
-                                        <td colspan = 4><img src=@item.day.condition.icon></img> </td> 
-                                    </tr>
-                                }
-                            }
-                        }
-                    }
-                </table>
-            @*</td>
+        <tr>
+            <th colspan=5 style="font-family:Verdana; font-size:14px; font-weight:bold;">Date</th>
+            <th colspan=5 style ="font-family:Verdana; font-size:14px; font-weight:bold;">Condition</th>
+            <th colspan=5 style="font-family:Verdana; font-size:14px; font-weight:bold;">Temperature</th>
+            <th> </th>
         </tr>
-    </table>*@
+        @{
+            if (ViewData["temp"] != null)
+            {
+                if (ViewData.Values != null && ViewData.Values.Count() > 0)
+                {
+                    foreach (var item in ViewData["temp"] as List<Weather.Forecastday>)
+                    {
+                        <tr>
+                            <td colspan=5 style="font-family:Verdana; font-size:12px;">@item.date</td>
+                            <td colspan=5 style ="font-family:Verdana; font-size:12px;">@item.day.condition.text</td>
+                            <td colspan=5 style="font-family:Verdana; font-size:12px;">@item.day.mintemp_f - @item.day.maxtemp_f</td>
+                            <td colspan = 4><img src=@item.day.condition.icon></img> </td> 
+                        </tr>
+                    }
+                }
+            }
+        }
+    </table>
 </div> 
