@@ -55,3 +55,36 @@
     </script>
 </div>
 
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    .img-container {
+        float: left;
+        width: 33.33%;
+        padding: 5px;
+    }
+
+    .clearfix::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+</style>
+<body>
+
+    <div class="clearfix">
+        <div class="img-container">
+            <img src="https://previews.123rf.com/images/paulrommer/paulrommer1405/paulrommer140500098/28918598-reno-skyline-in-watercolor-background.jpg" alt="Reno" style="width:350px">
+        </div>
+        <div class="img-container">
+            <img src="https://www.pixelstalk.net/wp-content/uploads/2016/10/Austin-Wallpapers-HD-Free-Download.jpg" alt="Austin" style="width:350px">
+        </div>
+        <div class="img-container">
+            <img src="https://images.unsplash.com/photo-1583801891351-8deae152ab6b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="Tampa" style="width:350px">
+        </div>
+    </div>
+
+</body>
+

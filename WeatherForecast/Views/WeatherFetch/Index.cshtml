@@ -3,10 +3,24 @@
 }
 <div class="text-center">
 <h2>Current Weather</h2>
-@{
-    Weather.Current data = ViewData["curr"] as Weather.Current;
-    Weather.Location loc = ViewData["loc"] as Weather.Location;
-    <p> Weather for @loc.name,@loc.region last updated at @data.last_updated</p>
+    @{
+        Weather.Current data = ViewData["curr"] as Weather.Current;
+        Weather.Location loc = ViewData["loc"] as Weather.Location;
+        var gmt = "";
+
+        @if (@loc.name == "Reno")
+        {
+            gmt = "GMT - 7";
+        }
+        @if (@loc.name == "Austin")
+        {
+            gmt = "GMT - 5";
+        }
+        @if (@loc.name == "Reno")
+        {
+            gmt = "GMT - 4";
+        }
+        <p> Weather for @loc.name,@loc.region last updated at @data.last_updated local time (@gmt)</p>
     <img src=@data.condition.icon></img>
     <p> @data.condition.text</p>
     <p> The Temperature is @data.temp_f &deg F (Feels Like @data.feelslike_f &deg F)</p>
