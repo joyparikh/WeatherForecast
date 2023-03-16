@@ -1,0 +1,63 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<style>
+    .button {
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+    }
+
+    .button1 {
+        background-color: #4CAF50;
+    }
+    /* Green */
+    .button2 {
+        background-color: #008CBA;
+    }
+    /* Blue */
+    .button3 {
+        background-color: #FF6666;
+    }
+    /* Red */
+</style>
+<div class="text-center">
+    <h1 class="display-4">Welcome to the Weather Forecast</h1>
+    <p>Choose a city</p>
+
+    <button id="myButton1" class="button button1">Reno</button>
+
+    <script type="text/javascript">
+        document.getElementById("myButton1").onclick = function () {
+            document.location = 'WeatherFetch?q=Reno';
+        };
+    </script>
+    @* <button class="button button1" value="Reno" onclick='redirectOnClick()'>Reno</button>
+    <script>
+        function redirectOnClick() {
+            document.location = 'WeatherFetch?q=Reno';
+        }
+    </script> *@
+    <button id="myButton2" class="button button3">Austin</button>
+
+    <script type="text/javascript">
+        document.getElementById("myButton2").onclick = function () {
+            document.location = 'WeatherFetch?q=Austin';
+        };
+    </script>
+    <button id="myButton3" class="button button2">Tampa</button>
+
+    <script type="text/javascript">
+        document.getElementById("myButton3").onclick = function () {
+            document.location = 'WeatherFetch?q=Tampa';
+        };
+    </script>
+</div>
+
