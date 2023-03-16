@@ -1,6 +1,9 @@
 ﻿@{
     ViewData["Title"] = "Weather Forecast";
+    string color = Convert.ToString(ViewData["color"]);
 }
+
+<body style="background-color:@color;">
 <div class="text-center">
 <h2>Current Weather</h2>
     @{
@@ -58,3 +61,4 @@
         }
     </table>
 </div> 
+</body>
